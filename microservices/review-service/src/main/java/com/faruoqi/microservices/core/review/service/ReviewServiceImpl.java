@@ -46,9 +46,15 @@ public class ReviewServiceImpl implements ReviewService {
                         "bad review","bad",
                         this.serviceUtil.getServiceAddress());
 
+        Review review3 =
+                new Review(productId,3,"author review 3",
+                        "bad review","bad",
+                        this.serviceUtil.getServiceAddress());
+
         List<Review> reviews = new ArrayList<Review>();
         reviews.add(review);
         reviews.add(review2);
+        reviews.add(review3);
         return reviews;
     }
 }

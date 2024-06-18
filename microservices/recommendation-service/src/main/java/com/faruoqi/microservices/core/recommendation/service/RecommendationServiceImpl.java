@@ -43,10 +43,13 @@ public class RecommendationServiceImpl implements RecommendationService {
         Recommendation recommendation2 =
                 new Recommendation(productId,2,"author 2",9,"great",this.serviceUtil.getServiceAddress());
 
+        Recommendation recommendation3 =
+                new Recommendation(productId,3,"author 3",9,"great",this.serviceUtil.getServiceAddress());
 
         List<Recommendation> recommendationList = new ArrayList<Recommendation>();
         recommendationList.add(recommendation);
         recommendationList.add(recommendation2);
+        recommendationList.add(recommendation3);
 
         return recommendationList;
 
