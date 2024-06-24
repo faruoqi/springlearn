@@ -21,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.data.domain.Sort.Direction.ASC;
 
 @DataMongoTest
-public class PersistenceTests {
+public class PersistenceTests extends MongoDbTestBase{
 
     @Autowired
     private ProductRepository repository;
