@@ -25,6 +25,7 @@ public class PersistenceTests extends MongoDbTestBase{
 
     @Autowired
     private ProductRepository repository;
+
     private ProductEntity savedEntity;
 
     @BeforeEach
@@ -32,7 +33,7 @@ public class PersistenceTests extends MongoDbTestBase{
         repository.deleteAll();
         ProductEntity entity = new ProductEntity(1,"n",1);
         savedEntity = repository.save(entity);
-        assertEquals(entity,savedEntity);
+        assertEqualsProduct(entity, savedEntity);
     }
 
     @Test
@@ -70,7 +71,7 @@ public class PersistenceTests extends MongoDbTestBase{
         assertEqualsProduct(savedEntity, entity.get());
     }
 
-    /*
+
     @Test
     void duplicateError() {
         assertThrows(DuplicateKeyException.class, () -> {
@@ -79,7 +80,7 @@ public class PersistenceTests extends MongoDbTestBase{
         });
     }
 
-     */
+
 
     @Test
     void optimisticLockError() {
