@@ -44,7 +44,7 @@ public class PersistenceTests extends MongoDbTestBase{
         assertEquals(2,repository.count());
     }
 
-    /*
+
     @Test
     void update() {
         savedEntity.setName("n2");
@@ -117,7 +117,7 @@ public class PersistenceTests extends MongoDbTestBase{
         nextPage = testNextPage(nextPage, "[1009, 1010]", false);
     }
 
-     */
+
 
 
     private void assertEqualsProduct(ProductEntity expectedEntity, ProductEntity actualEntity) {
