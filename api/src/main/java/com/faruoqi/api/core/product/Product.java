@@ -2,6 +2,9 @@ package com.faruoqi.api.core.product;
 
 public class Product {
 
+
+    private String id;
+
     private final int productId;
     private final String name;
     private final int weight;
