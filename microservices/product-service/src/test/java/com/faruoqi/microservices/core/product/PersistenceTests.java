@@ -77,8 +77,12 @@ public class PersistenceTests extends MongoDbTestBase{
         assertThrows(Exception.class, () -> {
             ProductEntity entity = new ProductEntity(savedEntity.getProductId(), "n", 1);
             repository.save(entity);
+            System.out.println(entity.getProductId()+" "+entity.getName());
         });
+
     }
+
+
 
 
 
