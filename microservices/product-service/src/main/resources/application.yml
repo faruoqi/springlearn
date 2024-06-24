@@ -6,7 +6,13 @@ logging:
   level:
     root: info
     com.faruoqi: debug
+    org.springframework.data.mongodb.core.MongoTemplate: DEBUG
 spring:
   config:
     activate:
       on-profile: docker
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: product-db
